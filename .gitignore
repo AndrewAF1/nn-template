@@ -1,5 +1,11 @@
+# my stuff
+
 data/
 saved_models/
+.vscode/
+
+
+# github python default gitignore
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
