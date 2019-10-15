@@ -1,3 +1,5 @@
-# nn-template
+# pytorch-nn-templates
 
-A basic neural network set up for classification problems. Designed to be modified for use in various ML problems. Currently includes an example use case with MNIST.
+Boilerplate code to accelerate my various side projects and experiments. 
+
+I intend to consolidate all of my repos of this type into this one, but thats a WIP.
