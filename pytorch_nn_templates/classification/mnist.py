@@ -1,5 +1,5 @@
-import model as m
-import train_test as t
+import pytorch_nn_templates.classification.model as m
+import pytorch_nn_templates.classification.train_test as t
 
 from torchvision import datasets as tv_sets
 from torchvision import transforms as T

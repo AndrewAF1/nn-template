@@ -1,4 +1,4 @@
-import utils
+import pytorch_nn_templates.classification.utils
 
 import numpy as np
 import torch

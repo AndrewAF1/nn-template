@@ -5,9 +5,9 @@ import torch.utils.data as D
 import sys
 from os.path import isfile
 
-import autoencoder
-import train
-import test
+import pytorch_nn_templates.autoencoder.autoencoder
+import pytorch_nn_templates.autoencoder.train
+import pytorch_nn_templates.autoencoder.test
 
 in_out_size = 28*28
 encoded_size = 10
