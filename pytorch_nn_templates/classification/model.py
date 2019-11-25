@@ -28,7 +28,6 @@ class FCModel(nn.Module):
         )
         
     def forward(self, x):
-        x = x.view(1, -1)
         return self.layers(x)
 
 
