@@ -1,8 +1,11 @@
 import torch
 from torch import nn as nn
 from torch import optim
+from visualize import VisdomLinePlotter
 
 def train(model, optimizer, loss_func, trainloader, device, epochs, filename, print_freq, save_freq):
+
+    plotter = VisdomLinePlotter()
 
     model = model.to(device)
 
@@ -24,8 +27,9 @@ def train(model, optimizer, loss_func, trainloader, device, epochs, filename, pr
             sum_loss+=loss.item()
 
             #print loss every n iterations
-            if (num % print_freq == print_freq-1):
+            if ((epoch*len(trainloader) + num) % print_freq == print_freq-1):
                 print("loss: " + str(sum_loss / print_freq))
+                plotter.plot('loss', 'train', 'Loss', epoch*len(trainloader) + num, (sum_loss / print_freq))
                 sum_loss = 0
 
             #save model params every n iterations
