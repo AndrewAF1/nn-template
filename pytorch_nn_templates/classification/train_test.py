@@ -1,7 +1,7 @@
 import torch
 from torch import nn as nn
 from torch import optim
-from visualize import VisdomLinePlotter
+from pytorch_nn_templates.classification.visualize import VisdomLinePlotter
 
 def train(model, optimizer, loss_func, trainloader, device, epochs, filename, print_freq, save_freq):
 
@@ -56,3 +56,4 @@ def test(model, testloader, device):
             num_correct+=1
         num_total+=1
     print("Percent correct: " + str(num_correct/num_total*100) + "%")
+    return num_correct/num_total*100
